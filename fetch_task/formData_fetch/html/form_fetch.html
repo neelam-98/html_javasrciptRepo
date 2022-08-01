@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Form validation</title> 
+        <style>
+            body {
+              background:lightgrey;
+              font-size: 16px;
+             
+              
+            }
+            
+            .content {
+              max-width: 600px;
+              margin:auto;
+              background: white;
+              padding: 25px;
+            }
+            .required:after{
+            content:" *";
+            color: red;
+          }
+            </style>
+</head>
+<body>
+    <div class="content">
+    <br>
+    <h1 style="margin-left: 20px;">Customer Details:</h1><br>
+    <hr>
+     <form name="contactForm">
+        <br>
+        <label style="margin-left: 20px;" class="required">Full Name:</label> <br><br>
+         <input type="text" id="Name" name="fullname" style="width: 265px; height: 20px;margin-left: 20px;"><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">Full Name</label><br><br>
+         <input type="text" name="city" style="width: 265px; height: 20px;margin-left: 20px;"><br>
+         <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">City</label>
+         <br><br>
+        <label for="number" style="margin-left: 20px;" class="required">Phone Number:</label><br><br> 
+        <input type="tel" name="mobile" placeholder="(000)000-0000"   style="width: 265px;height: 20px;margin-left: 20px;"><br><br>
+        <label for="email" style="margin-left: 20px;" class="required">E-mail:</label><br><br>
+        <input type="email" name="email" placeholder="ex: email@yahoo.com" style="width: 265px;height: 20px;margin-left: 20px;" ><br>
+       <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">example@example.com</label><br><br>
+
+        <label style="margin-left: 20px;" class="required">Password:</label><br><br>
+        <input type="password"  name="psw" style="width: 265px; height: 20px;margin-left: 20px;"><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">Special characters must be one of # $ @ ! % & * _</label><br><br>
+
+       
+          <!-- <label style="margin-left: 20px;" class="required"><input name="checkbox" type="checkbox" > I agree to the terms and condition.</label> -->
+          <hr>
+         <br>
+        <input type="button" style="background-color: #4CAF50; margin-left: 20px; 
+        border: none;  padding: 15px 55px;
+        color: white;" onclick={validateForm()}  value="submit"></input>
+        </form>  
+    </div>
+    <script src="../js/form_fetch.js"></script>
+</body>
+</html>

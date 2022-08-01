@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>first_page</title> 
+        <style>
+            body {
+              background:lightgrey;
+              font-size: 16px;
+             
+              
+            }
+            
+            .content {
+              max-width: 600px;
+              margin:auto;
+              background: white;
+              padding: 25px;
+            }
+            .required:after{
+            content:" *";
+            color: red;
+          }
+            </style>
+</head>
+<body>
+    <div class="content">
+    <br>
+    <h1 style="margin-left: 20px;">Customer Details:</h1><br> <hr>
+     <form>
+        <br>
+        <label for="fname" style="margin-left: 20px;" class="required">Full Name:</label> <br><br>
+        <input type="text" style="width: 265px; height: 20px;margin-left: 20px;" required>
+        <input type="text"  style="width: 265px;height: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">First Name</label>
+        <label style="position: relative;font-size:small;color: lightslategray;left: 220px;">Last Name</label><br><br>
+        <label for="address" style="margin-left: 20px;" class="required">Address:</label><br><br>
+        <input type="text"  style="width: 545px;height: 20px;margin-left: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">Street Address</label><br><br>
+        <input type="text" style="width: 545px;height: 20px;margin-left: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">Street Address Line 2</label><br><br>
+       <!--- <input type="text" style="width: 265px;height: 20px;margin-left: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">City</label><br><br>
+        <input type="text"style="width: 265px;height: 20px;margin-left: 20px;" required>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">State/Province</label><br><br>-->
+
+        <!-- <label for="fname" style="margin-left: 20px;" class="required">Full Name:</label> <br><br> -->
+        <input type="text" style="width: 265px; height: 20px;margin-left: 20px;" required>
+        <input type="text"  style="width: 265px;height: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">City</label>
+        <label style="position: relative;font-size:small;color: lightslategray;left: 252px;">State/Province</label><br><br>
+        <input type="text"  style="width: 545px;height: 20px;margin-left: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">postal/Zip Code</label><br><br>
+        <label for="number" style="margin-left: 20px;" class="required">Phone Number:</label><br><br>
+        <input type="tel" placeholder="(000)000-0000" pattern="[7-9]{1}[0-9]{9}"  style="width: 265px;height: 20px;margin-left: 20px;" required><br><br>
+        <label for="email" style="margin-left: 20px;">E-mail:</label><br><br>
+        <input type="email" placeholder="ex: email@yahoo.com" style="width: 265px;height: 20px;margin-left: 20px;" required><br>
+        <label style="position: relative;font-size:small;color: lightslategray;margin-left: 20px;">example@example.com</label><br><br>
+        <label for="message" style="margin-left: 20px;"class="required">How did you hear about us?</label><br><br>
+        <select name="message" id="message-where" style="width: 270px;height: 30px;margin-left: 20px;" required>
+            <option>Magazine </option>
+            <option>Book </option>
+            <option>Others</option>
+         </select><br><br>
+         <label style="margin-left: 20px;">Feedback about us:</label><br><br>
+        <!-- <input type="text" width="69" colsp="100">-->
+         <textarea rows="8" cols="72" style="margin-left: 20px;" required></textarea><br><br>
+         <label for="message" style="margin-left: 20px;">Suggestions if any for further improvement:</label><br><br>
+         <!-- <input type="text" width="69" colsp="100">-->
+          <textarea id="long message" name=" long description" rows="8" cols="72"  style="margin-left: 20px;" required></textarea><br><br>
+          <label style="margin-left: 20px;">Will you be willing to recommend us?
+          <input type="checkbox" required></label><br><br>
+          <label style="margin-left: 20px;" >Gender:</label>
+         <label><input type="radio" name="gender" value="male" required > Male</label>
+         <label><input type="radio" name="gender" value="female"  required> Female</label>
+          <label><input type="radio" name="gender" value="others"  required> Others</label><br><br>
+          
+          <label style="margin-left: 20px;">Please give references of any two people whom you feel:</label><br><br>
+         <style>
+          table, th, td {
+            border: 1px solid lightsteelblue;
+            margin-left: 20px;
+            border-collapse: collapse;
+          }</style>
+            <table style="width:92% ;">
+                 <tr>
+                      <th style="border-color: white;"></th>
+                      <th style="background-color:lightgrey;padding: 9px 40px;">Full Name </th> 
+                      <th style="background-color: lightgrey;padding: 9px 50px;">Address</th>
+                      <th style="background-color: lightgray;padding: 9px 36px;">Contact Number</th>
+                    </tr>
+                    <tr>
+                      <td style="background-color: lightgray; padding: 9px 15px;">1</td>
+                      <td ></td>
+                      <td></td>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td style="background-color: lightgray;padding: 9px 15px;">2</td>
+                      <td></td>
+                      <td></td>
+                      <th></th>
+                    </tr>
+            
+                  
+          </table><br>
+
+          <hr>
+         <br>
+        <input type="Submit" style="background-color: #4CAF50; margin-left: 20px;
+        border: none;  padding: 15px 55px;
+        color: white;"></input>
+       
+     </form>  
+    </div>
+</body>
+</html>

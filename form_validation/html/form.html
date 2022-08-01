@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Form validation</title> 
+        <link href="../css/form.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+    <br>
+    <h1>Customer Details:</h1><br>
+    <hr>
+     <form name="contactForm">
+        <br>
+        <label  class="required left_label">Full Name:</label> 
+        <br><br>
+        <input type="text"  name="firstname" class="left_input">
+        <input type="text"  name="lastname" class="right_input">
+        <br>
+        <label class="bottom_label">First Name</label>
+        <label class="right_label">Last Name</label>
+        <br><br>
+        
+        <label for="address" class="required left_label">Address:</label>
+        <br><br>
+        <input type="text" name="address" class="center_input">
+        
+        <br><br><br>
+       
+        <input type="text" name="city" class="left_input">
+        <input type="text" name="state" class="right_input">
+        <label  class="bottom_label">City</label>
+        <label class="right_label state">State</label>
+        <br><br>
+
+        <input type="text" name="pin" class="center_input" >
+        <br>
+        <label  class="bottom_label">Pin Code</label><br><br>
+        <label for="number" class="required left_label">Phone Number:</label>
+        <br><br> 
+
+        <input type="tel" name="mobile" placeholder="(000)000-0000"   class="left_input">
+        <br><br>
+        <label for="email" class="required left_label">E-mail:</label>
+        <br><br>
+        <input type="email" name="email" placeholder="ex: email@yahoo.com" class="left_input">
+        <br>
+        <label  class="bottom_label">example@example.com</label>
+        <br><br>
+
+        <label class="required left_label">Password:</label>
+        <br><br>
+        <input type="password"  name="psw" class="left_input">
+        <br>
+        <label  class="bottom_label">Special characters must be one of # $ @ ! % & * _</label>
+        <br><br>
+        <label  class="required left_label">How did you hear about us?</label>
+        <br><br>
+        <select name="hear_about" id="message-where" class="select">
+            <option>Select </option>
+            <option>Magazine </option>
+            <option>Book </option>
+            <option>Others</option>
+         </select><br><br>
+         <label class="left_label" >Gender:</label>
+         <label><input type="radio" name="gender" value="male"  > Male</label>
+         <label><input type="radio" name="gender" value="female"  > Female</label>
+          <label><input type="radio" name="gender" value="others"  > Others</label>
+          <br><br>
+          <label class="required left_label"><input name="checkbox" type="checkbox" > I agree to the terms and condition.</label>
+          <hr>
+         <br>
+        <input type="button" class="btn" onclick={validateForm()} value="submit"></input>
+        </form>  
+    </div>
+    <script src="../js/form.js"></script>
+</body>
+</html>

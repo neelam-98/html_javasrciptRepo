@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            fetch page
+        </title>
+    </head>
+    <body>
+        <h2>fetch task</h2>
+        <script>
+
+            // // fetch json user 
+            // fetch('https://jsonplaceholder.typicode.com/users')
+            // .then( (userData) => { console.log(userData);
+            //     return userData.json(); } )
+            // .then( (actualData) =>{ console.log(actualData); } )
+            // // .catch( (error) =>{
+            //     console.log(error);
+            // });
+        
+            // fetch github user
+            fetch('https://api.github.com/users').then(data => data.json())
+             .then(json => console.log(json))
+
+            //fetch post method
+            // creating resources
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+            //fetch get  method
+            // listing resources
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: "GET",
+            headers: {"Content-type": "application/json;charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
+
+            // updating resources
+            //in put method, we have to send full data with modifying data
+            fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: 'PUT',
+            body: JSON.stringify({
+                id: 1,
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+            
+            // patching resources
+            //in patch method, we have to send partial data(only modifying field data) no need of sending full data
+            fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: 'PATCH',
+            body: JSON.stringify({
+                title: 'foo',
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+            // // deleting resources
+            // fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            // method: 'DELETE',
+            // });
+    
+
+            // This will return all the posts that belong to the first user
+            fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+        </script>
+    </body>
+</html>

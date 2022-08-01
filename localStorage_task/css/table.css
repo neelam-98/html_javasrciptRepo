@@ -1,0 +1,30 @@
+.display_Table {
+    border: 2px solid black;
+    border-collapse: collapse;
+  
+}
+  
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+  
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    font-size: 80%;
+}
+  
+td {
+    border: 1px solid #dddddd;
+    ;
+    text-align: center;
+    padding: 8px;
+}
+  
+.set {
+    font-size: 12px;
+    padding-left: 14px;
+ }
