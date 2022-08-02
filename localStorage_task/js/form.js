@@ -19,19 +19,19 @@ function validateForm() {
 
 
 
-// Validate  firstname
-// if(firstname == "") {
-//     alert('Please Enter your  first name')
-//     return false;
-// } 
-// else {
-//     let regex = /^[a-zA-Z\s]+$/;  
-//     console.log('regex',firstname.match(/^[a-zA-Z\s]+$/)) ;             
-//     if(regex.test(firstname) === false) {
-//         alert('Invalid input for first name')
-//         return false;
-//     } 
-// }
+// Validate  fullname
+if(fullname == "") {
+    alert('Please Enter your   name')
+    return false;
+} 
+else {
+    let regex = /^[a-zA-Z\s]+$/;  
+    console.log('regex',fullname.match(/^[a-zA-Z\s]+$/)) ;             
+    if(regex.test(fullname) === false) {
+        alert('Invalid input for first name')
+        return false;
+    } 
+}
 //  validate lastname
 
 // if(lastname == "") {
@@ -53,19 +53,19 @@ function validateForm() {
 //     return false;
 // }
 
-// //  validate city
+//  validate city
 
-// if(city == " ") {
-//     alert('Please Enter city name')
-//     return false;
-// } 
-// else {
-//     let regex = /^[a-z&A-Z\s]+$/;                
-//     if(regex.test(city) === false) {
-//         alert('Invalid city name')
-//         return false;
-//     } 
-// }
+if(city == " ") {
+    alert('Please Enter city name')
+    return false;
+} 
+else {
+    let regex = /^[a-z&A-Z\s]+$/;                
+    if(regex.test(city) === false) {
+        alert('Invalid city name')
+        return false;
+    } 
+}
 // //  validate state
 
 // if(state == "") {
@@ -92,41 +92,41 @@ function validateForm() {
 //     } 
 // }
 
-// // Validate mobile number
-// if(mobile == "") {
-//     alert('Please Enter mobile number')
-//     return false;
-// } else {
-//     var regex = /^[7-9]\d{9}$/;
-//     if(regex.test(mobile) === false) {
-//         alert('Please Enter a valid 10 digit mobile number')
-//         return false;
-//     }
-// }
+// Validate mobile number
+if(mobile == "") {
+    alert('Please Enter mobile number')
+    return false;
+} else {
+    var regex = /^[7-9]\d{9}$/;
+    if(regex.test(mobile) === false) {
+        alert('Please Enter a valid 10 digit mobile number')
+        return false;
+    }
+}
 
 // Validate email
-// if(email == "") {
-//     alert('Please enter your email address')
-//     return false;
-// } else {
-//     var regex = /^\S+@\S+\.\S+$/;
-//     if(regex.test(email) === false) {
-//         alert('Invalid email address')
-//         return false;
-//     }
-// }
+if(email == "") {
+    alert('Please enter your email address')
+    return false;
+} else {
+    var regex = /^\S+@\S+\.\S+$/;
+    if(regex.test(email) === false) {
+        alert('Invalid email address')
+        return false;
+    }
+}
 
 // // Validate password
-// if(psw == "") {
-//     alert('Please enter password')
-//     return false;
-// } else {
-//     var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?_])[A-Za-z\d#$@!%&*?_]{8,12}$/;
-//     if(regex.test(psw) === false) {
-//         alert('Password must be 8-12 characters and contain at least one of the following:uppercase letter,lowercase letter,numbers and special characters.')
-//         return false;
-//     }
-// }
+if(psw == "") {
+    alert('Please enter password')
+    return false;
+} else {
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?_])[A-Za-z\d#$@!%&*?_]{8,12}$/;
+    if(regex.test(psw) === false) {
+        alert('Password must be 8-12 characters and contain at least one of the following:uppercase letter,lowercase letter,numbers and special characters.')
+        return false;
+    }
+}
 //  // validate dropdown
 
 // // if(hear_about == "Select") {
@@ -138,7 +138,7 @@ function validateForm() {
 // //     alert("Please select your gender");
 // //     return false;
 // // }
-// // // // validate checkbox
+// validate checkbox
 
 // if(contactForm.checkbox.checked==false) {
 //     alert("Please check the box if you want to proceed.");
@@ -171,53 +171,37 @@ function validateForm() {
 
 //trial and error
 
+localStorage.setItem('fullname', JSON.stringify(fullname));
+localStorage.setItem('city', JSON.stringify(city));
+localStorage.setItem('mobile', JSON.stringify(mobile));
+localStorage.setItem('email', JSON.stringify(email));
+localStorage.setItem('psw', JSON.stringify(psw));
+
+
+
 // console.log({
 //     Name,  mobile, email, 
 // })
 
 // const Data = {
-//     'firstname': firstname,
-//     'mobile': mobile,
-//     'email': email,
-//     'city':city,
-//     'Password':psw
+//     'fullname': fullname,
+//     // 'mobile': mobile,
+//     // 'email': email,
+//     // 'city':city,
+//     // 'Password':psw
 
 // }
+// debugger
+// const userData = localStorage.setItem('Data', JSON.stringify(Data));
 
-// const userdata = localStorage.setItem('Data', JSON.stringify(Data));
-
-// console.log('userdata', userdata);
-// window.location.replace("table.html");
+// console.log('userData', userData);
+window.location.replace("table.html");
 // // window.open('../HTML/formData_display.html')
 // localStorage.setItem('firstname',firstname);
 
 
-fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-        fullname:fullname,
-        city:city,
-        mobile:mobile,
-        email:email,
-        password:psw
-    }),
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-    },
-    })
-    .then(response => { return response.json();})
-    .then(json => console.log(json));
 
-
-
-fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: "GET",
-    headers: {"Content-type": "application/json;charset=UTF-8"}
-    })
-    .then(response => response.json()) 
-    .then(json => console.log(json))
-    .catch(err => console.log(err));
-
+// 
 }
 
 

@@ -16,19 +16,39 @@ function generate_table() {
      // creates a table row
      const row = document.createElement("tr");
  
-     for (let j = 0; j < 1; j++) {
+    //  for (let j = 0; j < 2; j++) {
        // Create a <td> element and a text node, make the text
        // node the contents of the <td>, and put the <td> at
        // the end of the table row
-       const cell = document.createElement("td");
+       const cell1 = document.createElement("td");
+       const cell2 = document.createElement("td");
+       const cell3 = document.createElement("td");
+       const cell4 = document.createElement("td");
+       const cell5 = document.createElement("td");
 
-       cell.innerHTML=(localStorage.getItem('firstname'));
-       console.log(cell);
+       cell1.innerHTML=JSON.parse(localStorage.getItem('fullname'));
+       console.log(cell1);
+       cell2.innerHTML=JSON.parse(localStorage.getItem('city'));
+       console.log(cell2);
+       cell3.innerHTML=JSON.parse(localStorage.getItem('mobile'));
+       console.log(cell3);
+       cell4.innerHTML=JSON.parse(localStorage.getItem('email'));
+       console.log(cell4);
+       cell5.innerHTML=JSON.parse(localStorage.getItem('psw'));
+       console.log(cell5);
+      //  cell.innerHTML=JSON.parse(localStorage.getItem('mobile'));
+      //  console.log(cell);
+      //  cell.innerHTML=JSON.parse(localStorage.getItem('email'));
+      //  console.log(cell);
       //  const cellText = document.createTextNode(localStorage.getItem('firstname'));
       //  console.log(cellText);
       //  cell.appendChild(cellText);
-       row.appendChild(cell);
-     }
+       row.appendChild(cell1);
+       row.appendChild(cell2);
+       row.appendChild(cell3);
+       row.appendChild(cell4);
+       row.appendChild(cell5);
+    //  }
  
      // add the row to the end of the table body
      tblBody.appendChild(row);
